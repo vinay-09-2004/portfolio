@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinay Kumar | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #00adb5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00adb5;
+        }
+
+        section {
+            padding: 100px 10%;
+            min-height: 100vh;
+        }
+
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #00adb5, #222831);
+            color: white;
+        }
+
+        #home h1 {
+            font-size: 40px;
+        }
+
+        #home span {
+            color: yellow;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        #about, #projects, #contact {
+            background: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #00adb5;
+        }
+
+        .project-card {
+            background: #eeeeee;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #00adb5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #007b83;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>Vinay</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div>
+        <h1>Hello, I'm <span>Vinay Kumar</span></h1>
+        <p>BCA Student | Web Developer | Programmer</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center;">
+        I am a BCA student passionate about Web Development, Java Programming, 
+        and Database Management Systems. I love building creative and useful projects.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>Student Management System</h3>
+        <p>Built using PHP and MySQL for managing student records.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Created using HTML, CSS and JavaScript with API integration.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio using modern web design.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form onsubmit="return showMessage()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="msg" style="text-align:center; margin-top:10px;"></p>
+</section>
+
+<footer>
+    <p>© 2026 Vinay Kumar | All Rights Reserved</p>
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("msg").innerHTML = "✅ Message sent successfully!";
+        return false; 
+    }
+</script>
+
+</body>
+</html>
